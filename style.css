@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', sans-serif;
+  background: linear-gradient(135deg, #c2f0c2, #d9f7d9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  background: white;
+  border-radius: 20px;
+  padding: 20px 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  /* -webkit-background-clip: text; */
+  color: transparent;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.score-box, .timer-box {
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #c471f5, #fa71cd);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#startBtn {
+  background: #00c9a7;
+  color: white;
+}
+
+#resetBtn {
+  background: #ff4b5c;
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.hole {
+  width: 80px;
+  height: 80px;
+  background: #2f2f2f;
+  border-radius: 50%;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.6);
+  position: relative;
+  cursor: pointer;
+}
+
+.hole.mole::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at top, #ffb347, #ff7f50);
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.game-over {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+#playAgainBtn {
+  margin-top: 10px;
+  background: #eee;
+  color: black;
+}
